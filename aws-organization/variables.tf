@@ -90,7 +90,17 @@ variable "infrastructure_accounts" {
   default = {
     "infrastructure1" = {
       name              = "shared-infra-jyy"
-      email_name        = "jyylabaws1-infrastructure"
+      email_name        = "jyylabaws1-shared-infra"
+      close_on_deletion = false
+    }
+    "infrastructure2" = {
+      name              = "network-jyy"
+      email_name        = "jyylabaws1-infra-network"
+      close_on_deletion = false
+    }
+    "infrastructure3" = {
+      name              = "backup-jyy"
+      email_name        = "jyylabaws1-infra-backup"
       close_on_deletion = false
     }
   }
@@ -105,8 +115,13 @@ variable "security_accounts" {
   }))
   default = {
     "security1" = {
+      name              = "security-tooling-jyy"
+      email_name        = "jyylabaws1-security-tooling"
+      close_on_deletion = false
+    }
+    "security2" = {
       name              = "log-archive-jyy"
-      email_name        = "jyylabaws1-security"
+      email_name        = "jyylabaws1-log-archive"
       close_on_deletion = false
     }
   }
