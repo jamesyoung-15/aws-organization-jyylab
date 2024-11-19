@@ -1,5 +1,9 @@
 # Usage
 
+## Accounts Setup
+
+Edit `variables.tf` to change account name, email domain, account email.
+
 ## Backend Config Example
 
 Add remote backend eg. `backend.tf`:
