@@ -23,7 +23,7 @@ resource "aws_organizations_organization" "my_organization" {
     "SERVICE_CONTROL_POLICY",
     "TAG_POLICY",
     "BACKUP_POLICY",
-    "RESOURCE_CONTROL_POLICY",
+    # "RESOURCE_CONTROL_POLICY",
   ]
 }
 
