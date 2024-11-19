@@ -3,6 +3,7 @@ provider "aws" {
 }
 
 resource "aws_organizations_organization" "my_organization" {
+  # aws service principal names: https://gist.github.com/shortjared/4c1e3fe52bdfa47522cfe5b41e5d6f22
   aws_service_access_principals = [
     "cloudtrail.amazonaws.com",
     "config.amazonaws.com",
@@ -11,7 +12,13 @@ resource "aws_organizations_organization" "my_organization" {
     "storage-lens.s3.amazonaws.com",
     "account.amazonaws.com",
     "ram.amazonaws.com",
+    "compute-optimizer.amazonaws.com",
+    "servicequotas.amazonaws.com",
+    "ssm.amazonaws.com",
+    "tagpolicies.tag.amazonaws.com",
+    "securitylake.amazonaws.com",
   ]
+  feature_set = "ALL"
 }
 
 ### Organizational Units ###

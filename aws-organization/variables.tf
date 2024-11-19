@@ -4,11 +4,6 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "environment" {
-  description = "Environment name eg. dev, prod, test"
-  type        = string
-}
-
 variable "email_domain" {
   description = "Email domain for accounts"
   type        = string
@@ -42,7 +37,7 @@ variable "dev_accounts" {
   default = {
     "dev1" = {
       name              = "dev-jyy"
-      email_name        = "dev"
+      email_name        = "jyylabaws1-dev"
       close_on_deletion = false
     }
   } 
