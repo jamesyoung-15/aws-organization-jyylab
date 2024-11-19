@@ -19,6 +19,12 @@ resource "aws_organizations_organization" "my_organization" {
     "securitylake.amazonaws.com",
   ]
   feature_set = "ALL"
+  enabled_policy_types = [
+    "SERVICE_CONTROL_POLICY",
+    "TAG_POLICY",
+    "BACKUP_POLICY",
+    "RESOURCE_CONTROL_POLICY",
+  ]
 }
 
 ### Organizational Units ###
